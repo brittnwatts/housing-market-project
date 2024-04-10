@@ -1,27 +1,23 @@
-# Import the dependencies.
+# Imports & dependencies.
 import numpy as np
-
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
+# scoped_session allows for ease of use when navigating the api
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy import create_engine, func
-
 from flask import Flask, jsonify, request
 
-
-
-#################################################
 # Database Setup
 #################################################
 app = Flask(__name__)
 engine = create_engine("sqlite:///hv_rc_db.db")
 
 
-# reflect an existing database into a new model
+# Reflect an existing database into a new model
 Base = automap_base()
 
-# reflect the tables
+# Reflect the tables
 Base.prepare(autoload_with=engine)
 
 # Save references to each table
@@ -29,18 +25,18 @@ t1 = Base.classes.table1
 t2 = Base.classes.table2
 t3 = Base.classes.table3
 t4 = Base.classes.table4
+
 # Create our session (link) from Python to the DB
 # session = Session(engine)
 # Need scoped session for ease of use, allows user to run multiple calls in a session
 Session = scoped_session(sessionmaker(bind=engine))
 
 
-#################################################
 # Flask Setup
 #################################################
 app = Flask(__name__)
 
-#Homepage
+#Homepage that provides available routes and useage
 @app.route("/")
 def welcome():
     """List all available api routes."""
@@ -60,14 +56,15 @@ def welcome():
         f"<br/>"
     )
 
+# Dynamic route to explore min and max values for home values (t1 in db)
 @app.route('/analyze_hv', methods=['GET'])
 def analyze_hv_col():
     # Get the requested column name from the route
     column_name = request.args.get('column_name')
 
-    # Check if the requested column exists in t1, 
+    # Check if the requested column exists in t1, return error if not present 
     if not hasattr(t1, column_name):
-        return jsonify({'error': f'Column {column_name} does not exist in table t1.'})
+        return jsonify({'error': f'Data unavailable for {column_name}.'})
     
     # Create a new session
     session = Session()
@@ -81,7 +78,7 @@ def analyze_hv_col():
     max_date = Session.query(t1.Date).filter(getattr(t1, column_name) == max_value).scalar()
 
     # Prepare dictionary
-    analysis_result = {
+    hv_min_max = {
         'column_name': column_name,
         'min_value': min_value,
         'min_date': min_date,
@@ -89,7 +86,7 @@ def analyze_hv_col():
         'max_date': max_date,
     }
 
-    return jsonify(analysis_result)
+    return jsonify(hv_min_max)
     session.close()
 
 @app.route('/analyze_rc', methods=['GET'])
@@ -97,9 +94,9 @@ def analyze_rc_col():
     # Get the requested column name from the route
     column_name = request.args.get('column_name')
 
-    # Check if the requested column exists in t2
+    # Check if the requested column exists in t2, return error if not
     if not hasattr(t2, column_name):
-        return jsonify({'error': f'Column {column_name} does not exist in table t2.'})
+        return jsonify({'error': f'Data unavailable for {column_name}.'})
     
     # Create a new session
     session = Session()
