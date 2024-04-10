@@ -2,8 +2,11 @@
 
 Contributors:
 Brittney Watts
+
 Kelsea Thayer
+
 Tristan Perry
+
 Owen Pollard
 
 We chose a housing market analysis to analyze market trends over time, including median prices as well as rent prices for several cities across the United States. We used Zillow and census information to create databases for the rental and housing prices over the past ten years. 
