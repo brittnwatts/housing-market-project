@@ -1,6 +1,6 @@
 # housing-market-project
 
-Contributors:
+Contributors:<br>
 Brittney Watts<br>
 Kelsea Thayer<br>
 Tristan Perry<br>
