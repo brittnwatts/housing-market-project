@@ -1,5 +1,11 @@
 # housing-market-project
 
+Contributors:
+Brittney Watts
+Kelsea Thayer
+Tristan Perry
+Owen Pollard
+
 We chose a housing market analysis to analyze market trends over time, including median prices as well as rent prices for several cities across the United States. We used Zillow and census information to create databases for the rental and housing prices over the past ten years. 
 
 Our data was ethically retrieved from public data sources. Housing information should be transparent and easily accessible. All of the laws surrounding housing information forbids discrimination to certain groups of people when renting or buying houses. Publishing the data of the housing market empowers people to make decisions when it comes to renting or buying property. People can find surrounding property values as well as fair market pricing for rent. This data helps with realistic expectations of costs for different cities. 
