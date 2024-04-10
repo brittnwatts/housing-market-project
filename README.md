@@ -20,12 +20,13 @@ Our flask allows users to look up a city and find the maximum and minimum rental
 ![image](https://github.com/brittnwatts/housing-market-project/assets/152021966/ff88c22f-334d-474a-99cc-e9952744475f)
 
 
+Our conclusions based on our data were, based on the data we analyzed, both rental and housing costs have experienced a significant surge since February 2015. As suggested by our analysis, it is clear that housing values are much higher on the Western side of the US compared to the East, specifically the Southeast region. The data also suggested that California is by far the most expensive state to rent, which is shown by the top 5 most expensive cities to rent all being located in California. The top 5 months with the highest increases in rental rates came in the year of 2021, we believe to be due to the pandemic. With the exception of Los Angeles, the top 5 months with the highest home value increases came after the pandemic as well. Both housing and rental prices have steadily increased, but both have seen a dramatic surge since the pandemic began.
 
-
+Some limitations of our data to consider are limited coverage, data accuracy, sampling bias, and limited data variables. Zillow's data may not cover all regions comprehensively. It may be more robust in urban or densely populated areas and less so in rural or remote regions. Data inaccuracies could skew maximum and minimum values, leading to misleading conclusions. The properties listed on Zillow may not be representative of the entire housing market. Certain types of properties or sellers may be overrepresented or underrepresented, leading to biases in the data. Not all the factors that influence housing prices can be included in this information. Factors such as neighborhood characteristics, school quality, crime rates, and economic indicators can significantly affect housing prices but are not in Zillow's data.
 
 
 Sources 
 Zillow Api https://www.zillow.com/research/data/
-Census https://www.census.gov/data/developers/data-sets.html
+
 
 
