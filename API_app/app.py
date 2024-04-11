@@ -42,7 +42,7 @@ def welcome():
     """List all available api routes."""
     return (
         f"Available Routes:<br/>"
-        f"The follwoing route takes input from the user, where City_ST can be replaced with a US city<br/>"
+        f"The following route takes input from the user, where City_ST can be replaced with a US city<br/>"
         f"and state (state abbreviated). JSON format is returned for the maximum and minimum home values & date.<br/>"
         f"<br/>"
         f"/analyze_hv?column_name=City_ST<br/>"
