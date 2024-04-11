@@ -48,7 +48,7 @@ def welcome():
         f"/analyze_hv?column_name=City_ST<br/>"
         f"Try: /analyze_hv?column_name=Dallas_TX for Dallas, Texas.<br/>"
         f"<br/>"
-        f"The follwoing route takes input from the user, where City_ST can be replaced with a US city<br/>"
+        f"The following route takes input from the user, where City_ST can be replaced with a US city<br/>"
         f"and state (state abbreviated). JSON format is returned for the maximum and minimum rental costs & date.<br/>"
         f"<br/>"
         f"/analyze_rc?column_name=City_ST<br/>"
