@@ -12,6 +12,10 @@ Our data was ethically retrieved from public data sources. Housing information s
 
 We used VSCode and Jupyter Notebook to analyze our data. Dataframes for each set of data were created. An SQLite database was constructed using Python for storage, query and API useage via Flask. as We used Sklearn and Collections libraries in our analysis, which are additional to libraries covered in course material to date. We found the highest and lowest value city average housing prices as well as highest and lowest average city rental prices. Many of the highest rental costs can be found in California. The highest housing prices can be found all over America from California to Massachusetts and Hawaii. 
 
+
+![image](https://github.com/brittnwatts/housing-market-project/assets/152021966/0ac1c09a-8a13-43d0-999f-abada5d69ce8)
+
+
 ![image](https://github.com/brittnwatts/housing-market-project/assets/152021966/a99a4d9e-cf50-4b93-a303-6782ff0b7bfe)
 
 
